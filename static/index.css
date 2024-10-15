@@ -1,0 +1,102 @@
+.result-container {
+display: flex;
+justify-content: space-between; /* Adjust as needed */
+}
+
+.toggle-button {
+flex: 1; /* Ensures equal width for each child */
+}
+    
+.dropdown {
+        position: relative;
+        display: inline-block;
+        width: 100%; /* Full width */
+    }
+    
+.dropdown-content {
+        display: none; /* Initially hidden */
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        max-height: 150px; /* Limit height */
+        overflow-y: auto; /* Enable scrolling */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+.dropdown-content span {
+        cursor: pointer;
+        display: block; /* Ensure each span is on a new line */
+        padding: 8px; /* Add some padding */
+        border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
+    }
+
+.dropdown-content span:hover {
+        background-color: #f1f1f1; /* Highlight on hover */
+    }
+
+#searchInput {
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding */
+    }
+
+#selectedSymptoms {
+        display: block;
+        margin-top: 10px;
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding */
+        cursor: text; /* Indicate that it is editable */
+    }
+
+.show {
+        display: block; /* Show the dropdown when the class is added */
+    }
+
+.clear-button {
+        margin-top: 10px;
+        cursor: pointer; /* Indicate that it is clickable */
+        padding: 8px 12px;
+        background-color: #106EBE; /* Red background */
+        color: white; /* White text */
+        border: none; /* Remove default border */
+        border-radius: 4px; /* Rounded corners */
+    }
+
+.clear-button:hover {
+        color: #0FFCBE; /* Darker red on hover */
+    }
+
+.cardimg{
+    align-self: center;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+   height: 150px;
+   width: 150px;
+    }
+
+    .parent {
+        display: flex;
+        justify-content: center; /* Align horizontally */
+        align-items: center; /* Align vertically */
+        height: 300px; /* Set height for the parent div */
+        background-color: #0FFCBE; /* Optional: background color */
+      }
+    
+      .child {
+        width: 100px; /* Set image or div width */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 2px solid #106EBE;
+        background-color: #0FFCBE;
+      }
+    
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
