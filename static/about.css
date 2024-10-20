@@ -1,0 +1,43 @@
+#about-container {
+    background-color: white; /* White background for the container */
+    padding: 20px; /* Padding around the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1, h2 {
+    color: #106EBE; /* Blue color for headings */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow for headings */
+}
+
+h1 {
+    font-size: 2.5rem; /* Size for the main heading */
+}
+
+h2 {
+    font-size: 1.75rem; /* Size for subheadings */
+}
+
+p {
+    line-height: 1.6; /* Improve readability with line height */
+}
+
+.list-group-item {
+    background-color: #e0f7fa; /* Mint background for list items */
+    border: none; /* Remove default border */
+    color: #106EBE; /* Blue text color for list items */
+}
+
+.list-group-item strong {
+    color: #106EBE; /* Different color for strong text */
+}
+
+.btn-primary {
+    background-color: #106EBE; /* Blue button background */
+    border-color: #106EBE; /* Blue button border */
+}
+
+.btn-primary:hover {
+    background-color: #0FFCBE; /* Mint hover color for buttons */
+    border-color: #0FFCBE; /* Mint hover border color */
+}

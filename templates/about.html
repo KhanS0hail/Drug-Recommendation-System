@@ -1,10 +1,45 @@
 {% extends 'base.html' %}
-
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+{% endblock %}
 {% block title %}Home - HealthMate{% endblock %}
 
 {% block content %}
-<body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body style="margin-top: 70px;">
+    <div class="container mt-5" id="about-container">
+        <h1 class="text-center mb-4">About the Drug Recommendation System</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Overview of the System</h2>
+                <p>
+                    The Drug Recommendation System aims to enhance the prescription process by providing accurate predictions of diseases based on user-input symptoms. By leveraging advanced machine learning algorithms, the system assists healthcare professionals in making informed decisions, ultimately improving patient outcomes.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <h2>How it Works</h2>
+                <p>
+                    Users input their symptoms into the system, which utilizes the Support Vector Machine (SVM) algorithm to predict potential diseases. This algorithm is trained on a CSV dataset obtained from Kaggle, along with other datasets that provide information on medication, workout recommendations, diet plans, and precautionary advice. The system then displays relevant details about the predicted disease and offers tailored recommendations.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="mt-4">Benefits</h2>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>For Doctors:</strong> Enhances the accuracy of disease predictions, allowing for more effective treatment plans.</li>
+            <li class="list-group-item"><strong>For Patients:</strong> Empowers patients with personalized recommendations for medication and lifestyle adjustments, promoting better health management.</li>
+            <li class="list-group-item"><strong>For Pharmacists:</strong> Assists in ensuring the correct medications are dispensed based on the system's recommendations, streamlining the dispensing process.</li>
+        </ul>
+
+        <h2 class="mt-4">Technology Stack</h2>
+        <p>
+            The system is built using <strong>Python</strong> and <strong>Flask</strong> as the framework. It utilizes <strong>scikit-learn</strong> for machine learning models, along with other essential libraries such as <strong>Pandas</strong> for data manipulation. The frontend is developed using <strong>HTML</strong>, <strong>CSS</strong>,<strong>Bootstrap</strong>, and <strong>JavaScript</strong>.
+        </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
 </body>
+</html>
 {% endblock %}

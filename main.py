@@ -1,12 +1,14 @@
-from flask import Flask, request, render_template, jsonify  # Import jsonify
+from flask import Flask, request, render_template,redirect,flash,jsonify  # Import jsonify
 import numpy as np
 import pandas as pd
-import pickle
-
+import pickle,os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # flask app
 app = Flask(__name__)
-
+app.secret_key = os.urandom(24)
 
 
 # load databasedataset===================================
@@ -213,7 +215,7 @@ def home():
         # print(mysysms)
         print(symptoms)
         if not symptoms:
-            message = "Please either write symptoms or you have written misspelled symptoms"
+            message = "Please either write symptoms or you have written misspelled symptoms !!!"
             return render_template('index.html', message=message)
         else:
 
@@ -239,6 +241,32 @@ def home():
                                    workout=workout)
 
     return render_template('index.html')
+   
+def send_email(sender_name, sender_email, subject, message):
+    # Your Gmail credentials
+    gmail_user = 'ks646397@gmail.com'
+    gmail_password = 'uirizgczdrciigzm'  # Generate an app password in your Google Account
+
+    # Create the email message
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = 'ks646397@gmail.com'  # Recipient email address
+    msg['Subject'] = subject
+
+    body = f"Name: {sender_name}\nEmail: {sender_email}\n\nMessage:\n{message}"
+    msg.attach(MIMEText(body, 'plain'))
+
+    try:
+        # Connect to Gmail's SMTP server and send the email
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.login(gmail_user, gmail_password)
+        server.sendmail(sender_email, 'ks646397@gmail.com', msg.as_string())
+        server.close()
+
+        return "Email sent successfully!"
+    except Exception as e:
+        print(f"Error: {e}")
+        return "Failed to send email."
 
 @app.route('/index')
 def start():
@@ -252,7 +280,24 @@ def about():
 # contact view funtion and path
 @app.route('/contact')
 def contact():
-    return render_template("contact.html")
+    return render_template('contact.html')
+
+# Route to handle form submission
+@app.route('/submit_contact', methods=['POST'])
+def submit_contact():
+    name = request.form['name']
+    email = request.form['email']
+    subject = request.form['subject']
+    message = request.form['message']
+
+    # Call the function to send the email with 4 arguments
+    status = send_email(name, email, subject, message)
+
+    # Flash the status message
+    flash(status)
+
+    # Redirect back to the contact page or show a success message
+    return redirect('/contact')
 
 # developer view funtion and path
 @app.route('/developer')

@@ -3,8 +3,75 @@
 {% block title %}Home - HealthMate{% endblock %}
 
 {% block content %}
-<body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body style="margin-top: 70px;">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Meet the Development Team</h1>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <!-- <img src="/static/member1.jpg" class="card-img-top" alt="Chavan Sanica"> Replace with team member's image -->
+                    <div class="card-body">
+                        <h5 class="card-title">Chavan Sanica</h5>
+                        <p class="card-text">Role: Project Lead</p>
+                        <p>Contributions: Oversaw project development, coordinated team efforts, and ensured deadlines were met.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <!-- <img src="/static/member2.jpg" class="card-img-top" alt="Khan Sohail">  -->
+                    <div class="card-body">
+                        <h5 class="card-title">Khan Sohail</h5>
+                        <p class="card-text">Role: Data Scientist</p>
+                        <p>Contributions: Developed machine learning models and conducted data analysis for the system.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <!-- <img src="/static/member3.jpg" class="card-img-top" alt="Khan Abdullah">  -->
+                    <div class="card-body">
+                        <h5 class="card-title">Khan Abdullah</h5>
+                        <p class="card-text">Role: Frontend Developer</p>
+                        <p>Contributions: Designed and implemented the user interface for the application.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <!-- <img src="/static/hadid.jpeg" class="card-img-top" alt="Khan Mohd. Hadi">  -->
+                    <div class="card-body">
+                        <h5 class="card-title">Khan Mohd. Hadi</h5>
+                        <p class="card-text">Role: Backend Developer</p>
+                        <p>Contributions: Developed the server-side logic and integrated the database.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div style="max-width: 100%;
+margin: 50px auto;
+background-color: #0FFCBE;
+border-radius: 10px;
+padding: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+border: 2px solid #106EBE;">
+
+        <h2 class="mt-4">Acknowledgments</h2>
+        <p>
+                We would like to extend our gratitude to our Guide, Prof. Anil Kale, for their invaluable guidance throughout the project. Special thanks to other professors and mentors who provided insights and support along the way.
+            </p>
+
+        <h2 class="mt-4">Future Plans</h2>
+        <p>
+            Looking ahead, we plan to implement additional features such as user authentication, a more comprehensive database for medications, and enhanced machine learning algorithms for improved predictions. We aim to continuously update the system based on user feedback and advancements in healthcare technology.
+        </p>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> <!-- Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Bootstrap JS -->
 </body>
 {% endblock %}
