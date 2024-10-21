@@ -64,19 +64,20 @@
                     <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your Message"></textarea>
                     <button type="submit" class="send-btn">Send Message</button>
                 </form>
+                {% with messages = get_flashed_messages() %}
+{% if messages %}
+     <ul>
+      {% for message in messages %}
+          <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+  {% endif %}
+{% endwith %}
             </div>
+<!-- Display Flash Messages -->
 
             <div class="col-md-6 text-center">
-                <!-- Display Flash Messages -->
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                 <ul>
-                  {% for message in messages %}
-                      <li>{{ message }}</li>
-                  {% endfor %}
-                  </ul>
-              {% endif %}
-      {% endwith %}
+                
                 <img src="/static/contact.jpg" alt="Contact Us" class="contact-image">
             </div>
             

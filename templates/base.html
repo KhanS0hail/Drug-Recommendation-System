@@ -14,7 +14,7 @@
 
 <style>
 .nav-link{
-color:#0FFCBE ;
+color:#fbfbfb ;
 }
 .logo {
     width: 50px;
@@ -30,8 +30,7 @@ color:#0FFCBE ;
     /* border: 2px solid black;
     border-radius: 25px; */
 }
-body {
-            background-image: url("{{ url_for('static', filename='bg.png') }}");
+body { 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -42,22 +41,22 @@ body {
 <body>
 
   <!-- Navbar (common for all pages) -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #106EBE;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #28323f;">
       <div class="container-fluid">
           <div class="logo">
-              <img class="myimg" src="{{ url_for('static', filename='logo2.png') }}" alt="">
+              <img class="myimg" src="{{ url_for('static', filename='logo3.png') }}" alt="">
           </div>
-          <a class="navbar-brand" href="#" style="color:#0FFCBE">HealthMate</a>
+          <a class="navbar-brand" href="#" style="color: #fbfbfb;">HealthMate</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/developer">Developer</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+              <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                  <li class="nav-item me-3"><a class="nav-link" href="/index">Home</a></li>
+                  <li class="nav-item me-3"><a class="nav-link" href="/about">About</a></li>
+                  <li class="nav-item me-3"><a class="nav-link" href="/contact">Contact</a></li>
+                  <li class="nav-item me-3"><a class="nav-link" href="/developer">Developer</a></li>
+                  <li class="nav-item me-3"><a class="nav-link" href="/blog">Blog</a></li>
               </ul>
               <!-- <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search">

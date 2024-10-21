@@ -4,7 +4,7 @@
     background-color: white;
     border-radius: 10px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px #28323f;
 }
 /* .col-md-6 {
     display: flex;              
@@ -38,7 +38,7 @@
 #predict-btn{
     cursor: pointer;     
     padding: 8px 12px; 
-    background-color: #106EBE; 
+    background-color: #28323f; 
     color: white;           
     border: none;        
     border-radius: 4px;      
@@ -47,7 +47,7 @@
 
 }
 #predict-btn:hover {
-    background-color: #0FFCBE; /* Change background color on hover */
+    background-color: #106EBE; /* Change background color on hover */
     color: black;               /* Change text color on hover */
 }
 
@@ -99,7 +99,7 @@ flex: 1; /* Ensures equal width for each child */
     }
 
 .clear-button:hover {
-        background-color: #0FFCBE; /* Change background color on hover */
+        background-color: #106EBE; /* Change background color on hover */
         color: black;               /* Change text color on hover */
     }
 
@@ -146,7 +146,7 @@ flex: 1; /* Ensures equal width for each child */
         justify-content: center; /* Align horizontally */
         align-items: center; /* Align vertically */
         height: 300px; /* Set height for the parent div */
-        background-color: #0FFCBE; /* Optional: background color */
+        background-color: #ffffff; /* Optional: background color */
       }
     
       .child {
@@ -157,19 +157,19 @@ flex: 1; /* Ensures equal width for each child */
       .card {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s, box-shadow 0.3s;
-        border: 2px solid #106EBE;
-        background-color: #0FFCBE;
+        border: 2px solid #28323f;
+        background-color: #fbfbfb;
       }
     
       .card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 16px #28323f;
       }
     
     .clear-button {
         cursor: pointer;     
         padding: 8px 12px; 
-        background-color: #106EBE; 
+        background-color: #28323f; 
         color: white;           
         border: none;        
         border-radius: 4px;      
@@ -177,7 +177,7 @@ flex: 1; /* Ensures equal width for each child */
     }
     
     .clear-button:hover {
-        background-color: #0FFCBE; /* Change background color on hover */
+        background-color: #106EBE; /* Change background color on hover */
         color: black;               /* Change text color on hover */
     }
     
