@@ -7,7 +7,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # flask app
+from flask import Flask
+# from flask_pymongo import PyMongo
+
 app = Flask(__name__)
+# app.config["MONGO_URI"] = "mongodb://localhost:27017/HealthMate"
+# mongo = PyMongo(app)
 app.secret_key = os.urandom(24)
 
 
