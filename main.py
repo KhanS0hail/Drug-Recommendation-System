@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import pickle,os
 import smtplib
+import requests
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -309,11 +310,15 @@ def submit_contact():
 def developer():
     return render_template("developer.html")
 
-# about view funtion and path
+
 @app.route('/blog')
 def blog():
-    return render_template("blog.html")
-
+    api_key = 'ef9d742aa592464f8d8ef4f08445756f'  # Replace with your API key
+    url = f'https://newsapi.org/v2/everything?q=healthcare&apiKey={api_key}&pageSize=12'
+    response = requests.get(url)
+    data = response.json()
+    articles = data.get('articles', [])
+    return render_template('blog.html', articles=articles)
 
 if __name__ == '__main__':
 
